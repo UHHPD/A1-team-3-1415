@@ -14,3 +14,6 @@ std::cout << a << " + " << b << " = " << c << std::endl;
 fin.close();
 fout.close();
 }
+git add datensumme.txt
+git commit -m"Augabe 2" datensumme.txt summieren.cc
+git push
