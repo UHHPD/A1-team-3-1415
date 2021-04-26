@@ -9,7 +9,7 @@ int main() {
     fin >> a >> b;
     int c = a + b;
     fout << c << std::endl;
-    std::cout << a << " + " << b << " = " << c << std::endl;
+    //std::cout << a << " + " << b << " = " << c << std::endl;
   }
   fin.close();
   fout.close();
