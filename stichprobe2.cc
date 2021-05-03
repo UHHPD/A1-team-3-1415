@@ -29,9 +29,24 @@ int main() {
     double sig = sqrt(var);
     //std::cout << d << "te Standardabweichung: " << sig << std::endl;
     //std::cout << std::endl;
-}
-fin1.close();
-fin2.close();
-fout1.close();
-fout2.close();
+  }
+  fin1.close();
+  fin2.close();
+  fout1.close();
+  fout2.close();
+  std::ifstream fin3("mittelwerte.txt");
+  std::ifstream fin4("varianzen.txt");
+  double f,P,g,Q = 0;
+  for (int d=1; d < 27; ++d){
+    fin3 >> f;
+    fin4 >> g;
+    P = P + f;
+    Q = Q + g;
+  }
+  double avravr = P/26;
+  double avrvar = Q/26;
+  std::cout << "Mittelwert der 26 Mittelwerte: " << avravr << std::endl;
+  std::cout << "Mittelwert der 26 Varianzen: " << avrvar << std::endl;
+  fin3.close();
+  fin4.close();
 }
